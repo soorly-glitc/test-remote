@@ -1,6 +1,6 @@
-#Git 첫 실습
 
-const students: [
+
+const students = [
         { no: 1, name: "홍길동", age: 20, score: 85 },
         { no: 2, name: "김철수", age: 21, score: 90 },
         { no: 3, name: "이영희", age: 20, score: 95 },
@@ -19,3 +19,13 @@ function print_student() { //v1
         console.log(student);
     });
 }
+
+function avgScore() { //v2
+    let sum = students.reduce((sum, s) => {
+                    return sum + s.score;
+                }, 0);
+   return sum / students.length;
+
+}
+print_student();
+console.log(avgScore());
