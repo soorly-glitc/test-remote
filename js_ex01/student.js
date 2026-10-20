@@ -30,7 +30,7 @@ function avgScore() { //v2
 print_student();
 console.log(avgScore());
 
-function getPassResult(no) {
+function getPassResult(no) { //v3
     const score = students.filter((v) => {v.no === no});
     if(score >= 60) {
         return "Pass";
@@ -38,4 +38,10 @@ function getPassResult(no) {
         return "Fail";
     }
 }
-console.log(getPassResult(8));
+console.log(getPassResult(8)); //v4
+
+function studentAdd(no, name, age, score) {
+    const newStudent = {no, name, age, score};
+    students.push(newStudent);
+    return newStudent;
+}
