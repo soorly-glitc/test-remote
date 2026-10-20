@@ -29,3 +29,13 @@ function avgScore() { //v2
 }
 print_student();
 console.log(avgScore());
+
+function getPassResult(no) {
+    const score = students.filter((v) => {v.no === no});
+    if(score >= 60) {
+        return "Pass";
+    }else {
+        return "Fail";
+    }
+}
+console.log(getPassResult(8));
